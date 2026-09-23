@@ -1,0 +1,99 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ESTILOS DEL FONDO (Asegura que esté centrado y usa tu fondo.png) */
+body {
+    background-image: url('fondo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    /* Esto mantiene la tarjeta en el centro */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    z-index: 1;
+}
+
+/* Capa oscura sobre la imagen para que resalte más la tarjeta */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: -1;
+}
+
+/* EFECTO CRISTAL DE LA TARJETA */
+.glass-container {
+    background: rgba(20, 0, 0, 0.5); 
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 0, 0, 0.3); 
+    padding: 3rem 4rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(220, 20, 60, 0.4); 
+    max-width: 500px;
+    width: 90%;
+}
+
+/* ESTILO DEL TÍTULO */
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: #ff3333; 
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.4);
+    letter-spacing: 2px;
+}
+
+p {
+    color: #dcdcdc;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+/* CONTENEDOR DE BOTONES */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ESTILO DE LOS BOTONES */
+.btn {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 50px;
+    background: transparent;
+    border: 2px solid #ff1a1a; 
+    transition: all 0.3s ease;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+/* EFECTO AL PASAR EL RATÓN */
+.btn:hover {
+    background: #ff1a1a; 
+    color: #000000; 
+    box-shadow: 0 0 15px #ff1a1a, 0 0 30px #ff1a1a, 0 0 45px #ff1a1a; 
+    transform: scale(1.05); 
+}
